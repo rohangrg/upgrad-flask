@@ -1,0 +1,19 @@
+<html>
+   <body>
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Product Information</h3>
+         Name<br>
+         <input type = "text" name = "name" /></br>
+         
+         Content<br>
+         <textarea name = "content" ></textarea><br>
+         
+         Price<br>
+         <input type = "text" name = "price" /><br>
+         
+         Weight<br>
+         <input type = "text" name = "weight" /><br>
+         <input type = "submit" value = "submit" /><br>
+      </form>
+   </body>
+</html>
