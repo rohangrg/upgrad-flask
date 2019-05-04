@@ -1,14 +1,20 @@
+<div style="margin: 20px">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <h1>Flask Home</h1>
+<h5><a href = "/newproduct">Click to add New Product</a></h5>
 
-<a href = "/newproduct">newproduct</a>
 <form  action = "{{ url_for('sendemail') }}"  method="POST">
-<table border = 1>
-         <thead>
-            <td>Name</td>
-            <td>Content</td>
-            <td>price</td>
-            <td>weight</td>
-            <td>Interested</td>
+<div style="width: 75%">
+    <table border = 1 class="table">
+        
+         <thead class="thead-dark">
+             <tr>
+                <td>Name</td>
+                <td>Content</td>
+                <td>price</td>
+                <td>weight</td>
+                <td>Interested</td>
+            </tr>
          </thead>  
          {% for row in rows %}
             <tr>
@@ -20,14 +26,24 @@
             </tr>
          {% endfor %}
 </table>
+</div>
 <input name="text">
-<input type="submit" value="Send Email">
+<input type="submit" value="Send Email" class="btn btn-primary mb-2">
 </form>
 
+
+
 <form  action = "{{ url_for('list') }}"  method="POST">
-    <input name="text" value={{pro}}>
-    <input type="submit">
+        <div class="form-group">
+            <input name="text" value={{pro}} >
+            <input type="submit" class="btn btn-primary mb-2" value="Search">
+        </div>
 </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 
